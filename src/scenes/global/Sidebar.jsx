@@ -155,13 +155,22 @@ const Sidebar = () => {
               > 
               Manage Team
             </MenuItem>
-            <Item
+            {/* <Item
               title="Contacts Information"
               to="/contacts"
               icon={<ContactsOutlinedIcon />}
               selected={selected}
               setSelected={setSelected}
-            />
+            /> */}
+            <MenuItem
+              title="Contacts"
+              icon={<ContactsOutlinedIcon />}
+              selected={selected}
+              setSelected={setSelected}
+              component={<Link to="/contacts" />}
+              > 
+              Contact Information
+            </MenuItem>
             <Item
               title="Invoices Balances"
               to="/invoices"
