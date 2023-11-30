@@ -55,13 +55,16 @@ const Sidebar = () => {
           padding: "5px 35px 5px 20px !important",
         },
         "& .ps-menu-button:hover": {
-          color: "#868dfb !important",
+          color: "#868dfb !important"
         },
         "& .ps-menu-button.active": {
           color: "#6870fa !important",
         },
         ".css-1wvake5": {
           height: "100%"
+        },
+        ".ps-menu-button:hover": {
+          backgroundColor: "transparent !important"
         }
       }}
     >
@@ -136,13 +139,22 @@ const Sidebar = () => {
             >
               Data
             </Typography>
-            <Item
+            {/* <Item
               title="Manage Team"
               to="/team"
               icon={<PeopleOutlinedIcon />}
               selected={selected}
               setSelected={setSelected}
-            />
+            /> */}
+            <MenuItem
+              title="Manage Team"
+              icon={<PeopleOutlinedIcon />}
+              selected={selected}
+              setSelected={setSelected}
+              component={<Link to="/team" />}
+              > 
+              Manage Team
+            </MenuItem>
             <Item
               title="Contacts Information"
               to="/contacts"
