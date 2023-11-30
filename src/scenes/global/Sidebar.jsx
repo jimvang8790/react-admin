@@ -139,13 +139,6 @@ const Sidebar = () => {
             >
               Data
             </Typography>
-            {/* <Item
-              title="Manage Team"
-              to="/team"
-              icon={<PeopleOutlinedIcon />}
-              selected={selected}
-              setSelected={setSelected}
-            /> */}
             <MenuItem
               title="Manage Team"
               icon={<PeopleOutlinedIcon />}
@@ -155,13 +148,6 @@ const Sidebar = () => {
               > 
               Manage Team
             </MenuItem>
-            {/* <Item
-              title="Contacts Information"
-              to="/contacts"
-              icon={<ContactsOutlinedIcon />}
-              selected={selected}
-              setSelected={setSelected}
-            /> */}
             <MenuItem
               title="Contacts"
               icon={<ContactsOutlinedIcon />}
@@ -171,14 +157,15 @@ const Sidebar = () => {
               > 
               Contact Information
             </MenuItem>
-            <Item
+            <MenuItem
               title="Invoices Balances"
-              to="/invoices"
               icon={<ReceiptOutlinedIcon />}
               selected={selected}
               setSelected={setSelected}
-            />
-
+              component={<Link to="/invoices" />}
+              > 
+              Invoices Balances
+            </MenuItem>
             <Typography
               variant="h6"
               color={colors.grey[300]}
